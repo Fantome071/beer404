@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django-extensions = "*"
 django-debug-toolbar = "*"
+psycopg2-binary = "*"
 Django = "*"
 
 [requires]
