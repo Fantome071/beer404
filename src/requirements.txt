@@ -1,3 +1,4 @@
 django
 django-extensions
 django-debug-toolbar
+psycopg2-binary

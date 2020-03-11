@@ -95,7 +95,9 @@ All build and deploy command must be do in **src** folder !
 
     pipenv shell
 
-    python beer404/manage.py runserver 0.0.0.0:8010
+    cd beer404
+
+    python manage.py migrate && python manage.py runserver 0.0.0.0:8010
 
 ### Production Build and Deploy : GitHub and Heroku
 

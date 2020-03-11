@@ -10,8 +10,12 @@
 
     django-admin startproject beer404
 
-    python beer404/manage.py startapp events
+    cd beer404
 
-    python beer404/manage.py migrate
+    python manage.py startapp events
 
-    python beer404/manage.py createsuperuser
+    python manage.py migrate
+
+    python manage.py createsuperuser
+
+    python manage.py migrate && python manage.py runserver 0.0.0.0:8010

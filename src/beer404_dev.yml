@@ -7,11 +7,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: bash -c 'python manage.py migrate && python manage.py runserver 0.0.0.0:8010'
     environment:
     - DEBUG=1
     - SECRET_KEY=beer404_key_dev
     - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
     volumes:
-    - ./app/beer404:/app/beer404:rw
+    - ./beer404:/app/beer404:rw
     ports:
     - 8010:8010

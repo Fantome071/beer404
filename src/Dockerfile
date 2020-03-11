@@ -17,7 +17,7 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 # Add App source file
-ADD ./app/beer404 /app/beer404
+ADD ./beer404 /app/beer404
 
 # Change workdir for app launch
 WORKDIR /app/beer404
