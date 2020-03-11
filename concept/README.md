@@ -10,6 +10,8 @@
   - [Optional Function](#optional-function)
   - [Technology](#technology)
 
+- [Management](./manage/task.md)
+
 ## Description
 
 The project **Beer404** is a evenemtial web application for view and manage events in the world. With this project you can without an account consult all events in the world, with an account you can create and manage your events.

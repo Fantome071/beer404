@@ -50,9 +50,6 @@ Requirements List :
     # Don't use this command, use Pipenv to setup local project !
     pip install -r ./requirements.txt
 
-    # For SQLite linker
-    sudo apt-get update && sudo apt-get install -y libsqlite3-dev
-
 ## Access
 
 - Access in local **development** :
@@ -66,8 +63,6 @@ Requirements List :
   - [Admin Panel](http://heroku.fr/admin)
 
 ## Build and Deploy
-
-All build and deploy command must be do in **src** folder !
 
 ### Local Build and Deploy : Docker
 
