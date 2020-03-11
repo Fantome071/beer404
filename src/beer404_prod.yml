@@ -1,0 +1,41 @@
+version: '3.6'
+
+
+volumes:
+  db_data:
+
+
+# To config :
+# https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
+services:
+  app:
+    container_name: app_beer404_prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+    - DEBUG=0
+    - SECRET_KEY=beer404_key
+    - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+    - SQL_ENGINE=django.db.backends.postgresql
+    - SQL_DATABASE=beer404
+    - SQL_USER=beer404
+    - SQL_PASSWORD=beer404
+    - SQL_HOST=db
+    - SQL_PORT=5432
+    volumes:
+    - ./app/beer404:/app/beer404:rw
+    ports:
+    - 8010:8010
+    depends_on:
+    - db
+  
+  db:
+    container_name: db_beer404_prod
+    image: postgres
+    volumes:
+    - db_data:/var/lib/postgresql/data/
+    environment:
+    - POSTGRES_USER=beer404
+    - POSTGRES_PASSWORD=beer404
+    - POSTGRES_DB=beer404
