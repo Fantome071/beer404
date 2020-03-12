@@ -20,7 +20,7 @@
     - [Production Build and Deploy : GitHub and Heroku](#production-build-and-deploy--github-and-heroku)
 
 - [Conception](./concept/README.md)
-- [Management](./manage/task.md)
+- [Management](./concept/manage/task.md)
 - [Database](./doc/database.md)
 - [Command](./doc/command.md)
 
