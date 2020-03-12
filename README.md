@@ -59,8 +59,8 @@ Requirements List :
     - **ID** : beer
     - **Password** : 404
 - Access in **production** :
-  - [Web Application](http://heroku.fr)
-  - [Admin Panel](http://heroku.fr/admin)
+  - [Web Application](https://beer404.herokuapp.com/)
+  - [Admin Panel](https://beer404.herokuapp.com/admin)
 
 ## Build and Deploy
 
