@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+from datetime import datetime
+from pprint import pprint
+
+
+def index(request):
+  return render(request, 'event/index.html')
