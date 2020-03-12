@@ -5,10 +5,8 @@ name: Python package
 
 on:
   push:
-    branches: [ master ]
     branches: [ release ]
   pull_request:
-    branches: [ master ]
     branches: [ release ]
 
 jobs:
@@ -17,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.5, 3.6, 3.7, 3.8]
+        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v2
