@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    {% load static %}
+    <!-- Documentation Materialize -->
+    <!-- https://materializecss.com/ -->
+    <link rel="stylesheet" type="text/css" href="{% static 'library/materialize/css/materialize.min.css' %}">
+    <script type="text/javascript" src="{% static 'library/materialize/js/materialize.min.js' %}"></script>
+
+    <style>
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url({% static 'library/materialize/css/icon/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2' %}) format('woff2');
+    }
+    
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+    </style>
+
+    <link rel="icon" href="{% static 'img/icon.png' %}">
+
+    <title>{% block title %}Beer404{% endblock %}</title>
+
+    {% block head %}
+    {% endblock %}
+  </head>
+
+  <body>
+    <header>
+      <nav role="navigation">
+        <div class="nav-wrapper pink lighten-2">
+          <img src="{% static 'img/icon.png' %}" style="height: 64px;">
+          <a href="/" class="brand-logo">Beer404</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/">Events List</a></li>
+            {% if user.is_authenticated %}
+              <li><a href="/event">My Events</a></li>
+              <li><a href="/event/subscriptions">My Subscriptions</a></li>
+            {% endif %}
+
+            {% if user.is_staff %}
+              <li><a href="/admin">Admin Panel</a></li>
+            {% endif %}
+
+            {% if user.is_authenticated %}
+              <li><a href="/logout" class="waves-effect waves-light btn red lighten-2">Disconnect <i class="material-icons right">power_settings_new</i></a></li>
+            {% else %}
+              <li><a href="/login" class="waves-effect waves-light btn blue lighten-2">Connect <i class="material-icons right">account_box</i></a></li>
+            {% endif %}
+          </ul>
+
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="/">Events List</a></li>
+            {% if user.is_authenticated %}
+              <li><a href="/event">My Events</a></li>
+              <li><a href="/event/subscriptions">My Subscriptions</a></li>
+            {% endif %}
+
+            {% if user.is_staff %}
+              <li><a href="/admin">Admin Panel</a></li>
+            {% endif %}
+
+            {% if user.is_authenticated %}
+              <li><a href="/logout" class="waves-effect waves-light btn">Disconnect <i class="material-icons right">power_settings_new</i></a></li>
+            {% else %}
+              <li><a href="/login" class="waves-effect waves-light btn">Connect <i class="material-icons right">account_box</i></a></li>
+            {% endif %}
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+      {% block header %}
+      {% endblock %}
+    </header>
+
+    <main id="content" class="container">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <footer class="page-footer pink lighten-2">
+      <div class="row">
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="/admin">Admin Connect</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2020 Made by Beer404
+        <a class="grey-text text-lighten-4 right" href="/">Home</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+<script type="text/javascript">
+  M.AutoInit();
+</script>
+
+
+{% block js %}
+{% endblock %}
