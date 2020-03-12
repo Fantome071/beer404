@@ -13,6 +13,7 @@
   - [Access](#access)
   - [Build and Deploy](#build-and-deploy)
     - [Local Build and Deploy : Docker](#local-build-and-deploy--docker)
+      - [UTBM Build](#utbm-build)
       - [Docker for development](#docker-for-development)
       - [Docker for production](#docker-for-production)
     - [Local Build and Deploy : Windows or Linux](#local-build-and-deploy--windows-or-linux)
@@ -66,6 +67,14 @@ Requirements List :
 
 ### Local Build and Deploy : Docker
 
+#### UTBM Build
+
+    docker-compose -f ./beer404_dev.yml build \
+    --build-arg "HTTP_PROXY=http://proxy.utbm.fr:3128" \
+    --build-arg "HTTPS_PROXY=http://proxy.utbm.fr:3128" \
+    --build-arg "http_proxy=http://proxy.utbm.fr:3128" \
+    --build-arg "https_proxy=http://proxy.utbm.fr:3128"
+
 #### Docker for development
 
     # Start
@@ -97,4 +106,4 @@ Requirements List :
 ### Production Build and Deploy : GitHub and Heroku
 
 - [GitHub Link](https://github.com/Fantome071/beer404)
-- [Heroku Link](https://github.com/Fantome071/beer404)
+- [Heroku Link](https://dashboard.heroku.com/apps/beer404)
