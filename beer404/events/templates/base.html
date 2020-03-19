@@ -74,6 +74,7 @@
               <li><a href="/logout" class="waves-effect waves-light btn red lighten-2">Disconnect <i class="material-icons right">power_settings_new</i></a></li>
             {% else %}
               <li><a href="/login" class="waves-effect waves-light btn blue lighten-2">Connect <i class="material-icons right">account_box</i></a></li>
+              <li><a href="/register" class="waves-effect waves-light btn orange lighten-2">Register <i class="material-icons right">how_to_reg</i></a></li>
             {% endif %}
           </ul>
 
@@ -91,7 +92,8 @@
             {% if user.is_authenticated %}
               <li><a href="/logout" class="waves-effect waves-light btn">Disconnect <i class="material-icons right">power_settings_new</i></a></li>
             {% else %}
-              <li><a href="/login" class="waves-effect waves-light btn">Connect <i class="material-icons right">account_box</i></a></li>
+              <li><a href="/login" class="waves-effect waves-light btn blue lighten-2">Connect <i class="material-icons right">account_box</i></a></li>
+              <li><a href="/register" class="waves-effect waves-light btn orange lighten-2">Register <i class="material-icons right">how_to_reg</i></a></li>
             {% endif %}
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
