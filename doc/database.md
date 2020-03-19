@@ -15,7 +15,7 @@
 ### Table List
 
 - **User** : User Data
-- **Events** : Events Data
+- **Event** : Events Data
 - **Participate** : Users who participate to events
 
 ### Table Schema

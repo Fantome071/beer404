@@ -9,6 +9,7 @@
   - [Main Function](#main-function)
   - [Optional Function](#optional-function)
   - [Technology](#technology)
+  - [Idea](#idea)
 
 - [Management](./manage/task.md)
 
@@ -43,3 +44,13 @@ The project **Beer404** is a evenemtial web application for view and manage even
 - **Application**
   - Framework Web **Django**
   - Framework CSS **Materialize**
+
+## Idea
+
+Here you can find any idea for the project :
+
+- Map System Idea
+  - Django Map Widgets
+  - Django Easy Maps
+  - Django Location Field
+  - Django Leaflet's
