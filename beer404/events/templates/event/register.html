@@ -1,17 +1,36 @@
-<form action="/?" method="post">
-  <label for="uname">Username:</label><br>
-  <input type="text" id="uname" name="uname"><br>
-  <label for="fname">First Name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last Name:</label><br>
-  <input type="text" id="lname" name="lname"><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email"><br>
-  <label for="birth">Birthday:</label><br>
-  <input type="date" id="birth" name="birth"><br>
-  <label for="pwd">Password:</label><br>
-  <input type="password" id="pwd" name="pwd"><br>
-  <label for="cpwd">Confirm Password:</label><br>
-  <input type="password" id="cpwd" name="cpwd"><br><br>
-  <input type="submit" value="Register">
-</form>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Beer404 : Register{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <form action="/?" method="post">
+    <label for="uname">Username:</label><br>
+    <input type="text" id="uname" name="uname"><br>
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="birth">Birthday:</label><br>
+    <input type="date" id="birth" name="birth"><br>
+    <label for="pwd">Password:</label><br>
+    <input type="password" id="pwd" name="pwd"><br>
+    <label for="cpwd">Confirm Password:</label><br>
+    <input type="password" id="cpwd" name="cpwd"><br><br>
+    <input type="submit" value="Register">
+  </form>
+</div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+</script>
+{% endblock %}

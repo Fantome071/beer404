@@ -1,7 +1,26 @@
-<form action="/?" method="post">
- <label for="login">Login:</label><br>
- <input type="text" id="login" name="login"><br>
- <label for="pwd">Password:</label><br>
- <input type="password" id="pwd" name="pwd"><br><br>
- <input type="submit" value="Sign In">
-</form>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Beer404 : Login{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <form action="/?" method="post">
+    <label for="login">Login:</label><br>
+    <input type="text" id="login" name="login"><br>
+    <label for="pwd">Password:</label><br>
+    <input type="password" id="pwd" name="pwd"><br><br>
+    <input type="submit" value="Sign In">
+  </form>
+</div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+</script>
+{% endblock %}

@@ -19,5 +19,11 @@ def index(request):
 
 @login_required
 def logout_view(request):
-    logout(request)
-    return redirect('index')
+  logout(request)
+  return redirect('index')
+
+def register_view(request):
+  return render(request, 'event/register.html')
+
+def login_view(request):
+  return render(request, 'event/login.html')

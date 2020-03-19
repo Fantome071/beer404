@@ -21,5 +21,7 @@ from events import views as eventViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', eventViews.index, name='index'),
-    path('logout', eventViews.logout_view, name='logout_view')
+    path('logout', eventViews.logout_view, name='logout_view'),
+    path('register', eventViews.register_view, name='register_view'),
+    path('login', eventViews.login_view, name='login_view')
 ]
