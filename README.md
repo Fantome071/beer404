@@ -23,6 +23,7 @@
 - [Management](./concept/manage/task.md)
 - [Database](./doc/database.md)
 - [Command](./doc/command.md)
+- [Install](./doc/install.md)
 
 ## Description
 

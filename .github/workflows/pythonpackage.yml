@@ -27,3 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    - name: Run Unit Test
+      run: |
+        cd beer404
+        python manage.py test
