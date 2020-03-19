@@ -5,32 +5,63 @@
 {% block title %}Beer404 : Register{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
 {% endblock %}
 
 {% block content %}
-<div class="row">
-  <form action="/?" method="post">
-    <label for="uname">Username:</label><br>
-    <input type="text" id="uname" name="uname"><br>
-    <label for="fname">First Name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last Name:</label><br>
-    <input type="text" id="lname" name="lname"><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br>
-    <label for="birth">Birthday:</label><br>
-    <input type="date" id="birth" name="birth"><br>
-    <label for="pwd">Password:</label><br>
-    <input type="password" id="pwd" name="pwd"><br>
-    <label for="cpwd">Confirm Password:</label><br>
-    <input type="password" id="cpwd" name="cpwd"><br><br>
-    <input type="submit" value="Register">
-  </form>
-</div>
+    <div class="row">
+        <form action="/?" method="post">
+            <div class="input-field col s4">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" id="uname" name="uname" class="validate">
+                <label for="uname">Username</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span><br>
+            </div>
+            <div class="input-field col s4">
+                <input type="text" id="fname" name="fname" class="validate">
+                <label for="fname">First Name</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span><br>
+            </div>
+            <div class="input-field col s4">
+                <input type="text" id="lname" name="lname" class="validate">
+                <label for="lname">Last Name</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span><br>
+            </div>
+            <div class="input-field col s10" style="display: block">
+                <i class="material-icons prefix">email</i>
+                <input type="email" id="email" name="email" class="validate">
+                <label for="email">Email</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span><br>
+            </div>
+            <div class="input-field col s10" style="display: block">
+                <i class="material-icons prefix">cake</i>
+                <input type="text" id="birth" name="birth" class="datepicker validate">
+                <label for="birth">Date of birth</label><br><br>
+            </div>
+            <div class="input-field col s5">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" id="pwd" name="pwd" class="validate">
+                <label for="pwd">Password</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span><br>
+            </div>
+            <div class="input-field col s5">
+                <input type="password" id="cpwd" name="cpwd" class="validate"><br><br>
+                <label for="cpwd">Confirm Password</label><br>
+            </div>
+            <div class="col s12">
+                <button class="btn waves-effect waves-light orange lighten-2" type="submit" name="action">Register
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
 {% endblock %}
 
 {% block js %}
-<script type="text/javascript">
-</script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems, options);
+        });
+    </script>
 {% endblock %}
