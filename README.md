@@ -1,4 +1,4 @@
-# Project Beer404
+# Project Beer404 :boom: BREAK :boom:
 
 ![Icon](./icon.png)
 
